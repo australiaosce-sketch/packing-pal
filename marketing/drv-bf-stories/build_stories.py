@@ -2,6 +2,7 @@
 Palette and fonts copied from /Brand/Skills/Instagram Carousels/brand-template/drv_brand.py v1.0.
 Colours are only ever used through the names below; check() refuses anything off-palette."""
 import os, re, json, subprocess, sys
+PLATFORM = sys.argv[1] if len(sys.argv) > 1 else 'ig'   # 'ig' = Instagram Stories, 'yt' = YouTube Short frames
 ESPRESSO='#4B2E20'; COCOA='#321509'; IVORY='#FFFAF7'; BLUSH='#F5DBCE'; CARAMEL='#C8925A'
 GOLD='#C9A97E'; ROSE='#C9A08E'; COPPER='#B4703F'; GLOW='#F6CB52'; TRUSTPILOT='#00B67A'
 PALETTE=[ESPRESSO,COCOA,IVORY,BLUSH,CARAMEL,GOLD,ROSE,COPPER,GLOW,TRUSTPILOT]
@@ -13,7 +14,7 @@ FONTS_CSS="""@font-face{font-family:'Inter Tight';font-weight:800;src:url(https:
 @font-face{font-family:'Mulish';font-weight:800;src:url(https://fonts.gstatic.com/s/mulish/v18/1Ptyg83HX_SGhgqO0yLcmjzUAuWexRNWwaA.ttf) format('truetype')}"""
 W,H=1080,1920
 TOP=270          # clears the Stories progress bar + profile row
-LEFT,RIGHT=80,120
+LEFT,RIGHT=80,(170 if PLATFORM=='yt' else 120)   # Shorts buttons sit down the right edge
 FOOT_Y=1600      # footer sits above the reply bar
 
 CSS=f"""<style>{FONTS_CSS}
@@ -75,7 +76,8 @@ end = (f'<div style="position:absolute;inset:0;background:radial-gradient(circle
        + f'<div style="position:absolute;left:{LEFT}px;right:{RIGHT}px;top:560px">{li}</div>'
        + f'<div style="position:absolute;left:{LEFT}px;right:{RIGHT}px;top:1150px">'
          f'<div class="b" style="color:{BLUSH};font-size:36px">Free shipping on minimum spend.</div>'
-         f'<div style="margin-top:44px;height:150px;border:4px dashed {rgba(GOLD,.7)};border-radius:28px;display:flex;align-items:center;justify-content:center" class="k"><span style="color:{GOLD}">Link sticker here</span></div></div>'
+         + (f'<div style="margin-top:44px;height:150px;border:4px dashed {rgba(GOLD,.7)};border-radius:28px;display:flex;align-items:center;justify-content:center" class="k"><span style="color:{GOLD}">Link sticker here</span></div>' if PLATFORM=='ig'
+            else f'<div style="margin-top:44px"><span class="pill">SHOP AT SKINCAREBYDRV.COM</span></div>') + '</div>'
        + f'<div style="position:absolute;right:{RIGHT}px;top:{FOOT_Y-6}px" class="k"><span style="color:{GOLD};font-size:24px">Love Dr V x</span></div>')
 stories.append(page(end, True, last=True))
 
@@ -108,17 +110,19 @@ await p.goto('file://'+j.html,{waitUntil:'networkidle'});await p.evaluate(()=>do
 await p.screenshot({path:j.out,type:'jpeg',quality:92});await p.close();}await b.close();})();"""
 
 if __name__=='__main__':
-    wd=os.path.dirname(os.path.abspath(__file__)); probs=check(stories)
+    wd=os.path.dirname(os.path.abspath(__file__)); OUTDIR=os.path.join(wd,'out' if PLATFORM=='ig' else 'youtube'); os.makedirs(OUTDIR,exist_ok=True); probs=check(stories)
     if probs: print('OFF-BRAND, NOT RENDERED:'); [print(' -',p) for p in probs]; sys.exit(1)
     jobs=[]
     for n,h in enumerate(stories,1):
-        hp=os.path.join(wd,f'_story_{n:02d}.html'); open(hp,'w').write(h)
-        jobs.append({'html':hp,'out':os.path.join(wd,'out',f'DrV_BF_story_{n:02d}.jpg')})
+        hp=os.path.join(wd,f'_{PLATFORM}_{n:02d}.html'); open(hp,'w').write(h)
+        jobs.append({'html':hp,'out':os.path.join(wd,OUTDIR,(f'DrV_BF_story_{n:02d}.jpg' if PLATFORM=='ig' else f'DrV_BF_short_frame_{n:02d}.jpg'))})
     json.dump(jobs,open(os.path.join(wd,'_jobs.json'),'w')); open(os.path.join(wd,'_render.js'),'w').write(RENDER_JS)
     subprocess.run(['node',os.path.join(wd,'_render.js'),os.path.join(wd,'_jobs.json')],check=True)
     from PIL import Image
     ims=[Image.open(j['out']).resize((270,480)) for j in jobs]
     S=Image.new('RGB',(len(ims)*282+12,504),(255,250,247))
     for i,im in enumerate(ims): S.paste(im,(12+i*282,12))
-    S.save(os.path.join(wd,'DrV_BF_stories_preview.jpg'),quality=90)
-    print('ON BRAND. Rendered',len(jobs),'stories')
+    S.save(os.path.join(OUTDIR if PLATFORM=='yt' else wd,'DrV_BF_stories_preview.jpg' if PLATFORM=='ig' else 'DrV_BF_short_preview.jpg'),quality=90)
+    print('ON BRAND. Rendered',len(jobs),PLATFORM,'frames')
+    for f in os.listdir(wd):
+        if f.startswith('_'): os.remove(os.path.join(wd,f))
