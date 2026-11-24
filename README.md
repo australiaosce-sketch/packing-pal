@@ -37,7 +37,7 @@ It's a single `index.html` file with no build step, no server and no sign-up.
 Download `index.html` and open it in any modern browser. That's it.
 
 ### Publish with GitHub Pages
-1. Create a new repository and upload `index.html`, `logo.jpg` and this `README.md`.
+1. Create a new repository and upload `index.html` and this `README.md`.
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment**, set the source to **Deploy from a branch**, choose `main` and `/ (root)`, then click **Save**.
 4. After a minute or so, the app is live at `https://<your-username>.github.io/<repository-name>/`.
@@ -54,7 +54,6 @@ Download `index.html` and open it in any modern browser. That's it.
 
 ```
 index.html   The whole app: markup, styles, scripts and the logo (embedded as an image)
-logo.jpg     A copy of the logo, used as the browser-tab icon
 README.md    This file
 ```
 
