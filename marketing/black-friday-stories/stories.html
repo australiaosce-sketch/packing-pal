@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Packing Pal – Black Friday Stories</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ===== EDIT THE OFFER HERE ===== (also in the CONFIG block in the script below) */
+  :root{
+    --cream:#fbf4ea; --panel:#fffaf3; --ink:#3b2a20; --muted:#7a6656; --line:#ecdcc6;
+    --teal:#1b9795; --deep:#0f2f2f; --deep2:#163d3c; --coral:#f2735a; --sun:#f7c948; --tan:#ecbc94;
+    --display:"Fredoka","Nunito",system-ui,sans-serif; --body:"Nunito",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#222;font-family:var(--body);display:flex;flex-wrap:wrap;gap:40px;padding:40px}
+  .story{width:1080px;height:1920px;position:relative;overflow:hidden;flex:none}
+  .center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .brand{position:absolute;top:150px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:18px;
+         font:600 44px var(--display);letter-spacing:.5px}
+  .brand .dot{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:32px}
+  h1,h2,.disp{font-family:var(--display);font-weight:700;line-height:.95}
+  .pill{display:inline-block;padding:18px 40px;border-radius:999px;font:800 40px var(--body);letter-spacing:3px;text-transform:uppercase}
+  .sticker-slot{border:5px dashed currentColor;opacity:.45;border-radius:40px;display:grid;place-items:center;
+                font:700 32px var(--body);letter-spacing:2px;text-transform:uppercase}
+  .confetti i{position:absolute;display:block;border-radius:6px}
+
+  /* 1 teaser */
+  #s1{background:radial-gradient(circle at 50% 38%,#1e5452 0,var(--deep) 62%);color:var(--cream)}
+  #s1 .stars i{position:absolute;background:var(--sun);border-radius:50%}
+  #s1 h1{font-size:116px;margin-top:70px}
+  #s1 h1 em{font-style:normal;color:var(--sun)}
+  #s1 p{font:700 52px/1.3 var(--body);color:#a9c4c0;margin-top:40px}
+
+  /* 2 reveal */
+  #s2{background:var(--coral);color:#fff}
+  #s2 .rays{position:absolute;inset:-400px;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(255,255,255,.10) 0 10deg,transparent 10deg 20deg)}
+  #s2 .tag{position:relative;background:var(--cream);color:var(--ink);width:780px;padding:150px 50px 80px;border-radius:60px;
+           box-shadow:0 30px 0 rgba(59,42,32,.18);transform:rotate(-4deg)}
+  #s2 .tag:before{content:"";position:absolute;top:56px;left:50%;width:64px;height:64px;margin-left:-32px;border-radius:50%;
+           background:var(--coral);box-shadow:inset 0 0 0 10px var(--tan)}
+  #s2 .tag .string{position:absolute;top:-180px;left:50%;width:10px;height:240px;background:var(--tan);margin-left:-5px;border-radius:5px}
+  #s2 .tag h2{font-size:96px;letter-spacing:2px;color:var(--deep)}
+  #s2 .tag .big{font:700 330px/0.85 var(--display);color:var(--coral);margin:30px 0 0}
+  #s2 .tag .off{font:700 120px var(--display);color:var(--teal);margin-top:-10px}
+  #s2 .tag .what{font:800 46px var(--body);margin-top:34px;color:var(--muted)}
+  #s2 .under{margin-top:110px;font:800 50px var(--body)}
+
+  /* 3 checklist */
+  #s3{background:var(--cream);color:var(--ink)}
+  #s3 .card{background:var(--panel);border:6px solid var(--line);border-radius:56px;width:880px;padding:70px 70px 60px;text-align:left;
+            box-shadow:0 24px 0 var(--line)}
+  #s3 .card h2{font-size:84px;color:var(--teal);margin-bottom:12px}
+  #s3 .card .sub{font:700 38px var(--body);color:var(--muted);margin-bottom:46px}
+  #s3 .row{display:flex;align-items:center;gap:36px;padding:30px 0;border-top:4px dashed var(--line);font:800 54px var(--body)}
+  #s3 .box{width:78px;height:78px;border-radius:22px;border:6px solid var(--teal);flex:none;display:grid;place-items:center;
+           font:900 52px var(--body);color:#fff}
+  #s3 .box.on{background:var(--teal)}
+  #s3 .row.done span{text-decoration:line-through;text-decoration-thickness:5px;color:var(--muted)}
+  #s3 .row.hot{color:var(--coral)}
+  #s3 .row.hot .box{border-color:var(--coral);background:var(--coral)}
+  #s3 .row.hot b{background:var(--sun);color:var(--ink);padding:4px 18px;border-radius:14px;margin-left:8px;font-size:42px}
+
+  /* 4 boarding pass */
+  #s4{background:var(--teal);color:var(--cream)}
+  #s4 .bg-stripes{position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 60px,transparent 60px 120px)}
+  #s4 h1{font-size:100px;margin:120px 0 50px}
+  #s4 .pass{position:relative;width:880px;background:var(--panel);color:var(--ink);border-radius:50px;overflow:hidden;text-align:left;
+            box-shadow:0 26px 0 rgba(15,47,47,.35)}
+  #s4 .pass .top{background:var(--coral);color:#fff;padding:40px 60px;display:flex;justify-content:space-between;align-items:center;
+                 font:800 38px var(--body);letter-spacing:4px}
+  #s4 .route{display:flex;justify-content:space-between;align-items:center;padding:36px 60px 10px}
+  #s4 .route .city{font:700 110px var(--display);color:var(--deep)}
+  #s4 .route small{display:block;font:800 30px var(--body);color:var(--muted);letter-spacing:3px}
+  #s4 .plane{font-size:90px;color:var(--teal)}
+  #s4 .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;padding:20px 60px 50px}
+  #s4 .grid small{display:block;font:800 28px var(--body);color:var(--muted);letter-spacing:3px}
+  #s4 .grid b{font:700 56px var(--display)}
+  #s4 .tear{border-top:8px dashed var(--line);position:relative}
+  #s4 .tear:before,#s4 .tear:after{content:"";position:absolute;top:-40px;width:80px;height:80px;border-radius:50%;background:var(--teal)}
+  #s4 .tear:before{left:-40px}#s4 .tear:after{right:-40px}
+  #s4 .code{padding:50px 60px 60px;text-align:center}
+  #s4 .code small{font:800 32px var(--body);color:var(--muted);letter-spacing:4px}
+  #s4 .code .c{margin-top:18px;font:700 124px var(--display);color:var(--coral);letter-spacing:8px;border:6px dashed var(--coral);border-radius:34px;padding:10px 0 20px}
+  #s4 .barcode{height:90px;margin:0 60px 50px;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 12px,var(--ink) 12px 14px,transparent 14px 22px,var(--ink) 22px 30px,transparent 30px 34px)}
+  #s4 .hint{margin-top:44px;font:800 44px var(--body)}
+
+  /* 5 poll */
+  #s5{background:linear-gradient(180deg,#bfe6e3 0,#fff4e2 62%,var(--tan) 62%,#e6ae82 100%);color:var(--ink)}
+  #s5 .sunb{position:absolute;top:250px;right:90px;width:170px;height:170px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 40px rgba(247,201,72,.25)}
+  #s5 h1{font-size:126px;color:var(--deep);margin-top:-120px}
+  #s5 h1 span{color:var(--coral)}
+  #s5 .sub{font:800 48px var(--body);color:var(--muted);margin-top:30px}
+  #s5 .sticker-slot{width:760px;height:300px;margin-top:80px;color:var(--deep);background:rgba(255,255,255,.4)}
+
+  /* 6 last call */
+  #s6{background:var(--deep);color:var(--cream)}
+  #s6 .board{width:900px;background:#081c1c;border-radius:40px;padding:50px;box-shadow:inset 0 0 0 6px var(--deep2)}
+  #s6 .board .lbl{display:flex;justify-content:space-between;font:800 30px var(--body);letter-spacing:4px;color:#a9c4c0;margin-bottom:24px}
+  #s6 .flap{display:flex;gap:10px;justify-content:center;margin:14px 0}
+  #s6 .flap span{width:96px;height:130px;background:#163d3c;border-radius:14px;display:grid;place-items:center;font:700 92px var(--display);
+                 color:var(--sun);position:relative}
+  #s6 .flap span:after{content:"";position:absolute;left:0;right:0;top:50%;height:4px;background:#081c1c}
+  #s6 .flap.red span{color:var(--coral)}
+  #s6 .status{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:20px;font:800 44px var(--body);color:var(--coral);letter-spacing:4px}
+  #s6 .status i{width:30px;height:30px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 10px rgba(242,115,90,.25)}
+  #s6 h1{font-size:118px;margin-top:80px}
+  #s6 h1 em{font-style:normal;color:var(--sun)}
+  #s6 p{font:700 48px/1.35 var(--body);color:#a9c4c0;margin-top:30px}
+  #s6 .sticker-slot{position:absolute;bottom:300px;left:50%;transform:translateX(-50%);width:600px;height:150px;color:var(--cream)}
+</style>
+</head>
+<body>
+
+<!-- 1. TEASER -->
+<section class="story" id="s1">
+  <div class="stars"></div>
+  <div class="brand"><span class="dot" style="background:var(--teal)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center">
+    <svg width="520" height="560" viewBox="0 0 260 280">
+      <rect x="95" y="20" width="70" height="44" rx="16" fill="none" stroke="#ecbc94" stroke-width="12"/>
+      <rect x="30" y="58" width="200" height="190" rx="30" fill="#f2735a"/>
+      <rect x="30" y="58" width="200" height="190" rx="30" fill="none" stroke="#3b2a20" stroke-opacity=".15" stroke-width="4"/>
+      <rect x="78" y="58" width="16" height="190" fill="#ecbc94"/><rect x="166" y="58" width="16" height="190" fill="#ecbc94"/>
+      <circle cx="70" cy="258" r="12" fill="#3b2a20"/><circle cx="190" cy="258" r="12" fill="#3b2a20"/>
+      <rect x="108" y="120" width="44" height="34" rx="6" fill="#f7c948"/>
+      <text x="130" y="144" font-family="Fredoka" font-weight="700" font-size="20" text-anchor="middle" fill="#3b2a20">?</text>
+    </svg>
+    <h1>Something big<br>is being <em>packed</em>…</h1>
+    <p data-k="teaserLine"></p>
+  </div>
+</section>
+
+<!-- 2. REVEAL -->
+<section class="story" id="s2">
+  <div class="rays"></div>
+  <div class="brand"><span class="dot" style="background:var(--deep)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center">
+    <div class="tag">
+      <div class="string"></div>
+      <h2>BLACK FRIDAY</h2>
+      <div class="big" data-k="pct"></div>
+      <div class="off">OFF</div>
+      <div class="what" data-k="what"></div>
+    </div>
+    <div class="under" data-k="dates"></div>
+  </div>
+</section>
+
+<!-- 3. CHECKLIST -->
+<section class="story" id="s3">
+  <div class="brand" style="color:var(--teal)"><span class="dot" style="background:var(--teal)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center">
+    <div class="card">
+      <h2>Black Friday<br>packing list</h2>
+      <div class="sub">Tick it off before Monday</div>
+      <div class="row done"><div class="box on">✓</div><span>Passport</span></div>
+      <div class="row done"><div class="box on">✓</div><span>Sun cream</span></div>
+      <div class="row done"><div class="box on">✓</div><span>Phone charger</span></div>
+      <div class="row hot"><div class="box">✓</div><span>Grab the deal <b data-k="pctOff"></b></span></div>
+      <div class="row"><div class="box"></div><span>Excuses not to go</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BOARDING PASS / CODE -->
+<section class="story" id="s4">
+  <div class="bg-stripes"></div>
+  <div class="brand"><span class="dot" style="background:var(--coral)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center">
+    <h1>Your ticket<br>to savings</h1>
+    <div class="pass">
+      <div class="top"><span>BOARDING PASS</span><span>✦ BF26</span></div>
+      <div class="route">
+        <div><small>FROM</small><div class="city">FULL</div></div>
+        <div class="plane">✈</div>
+        <div style="text-align:right"><small>TO</small><div class="city" data-k="pctShort"></div></div>
+      </div>
+      <div class="grid">
+        <div><small>DEPARTS</small><b data-k="start"></b></div>
+        <div><small>GATE</small><b>BF</b></div>
+        <div><small>LANDS</small><b data-k="end"></b></div>
+      </div>
+      <div class="tear"></div>
+      <div class="code"><small>USE CODE AT CHECKOUT</small><div class="c" data-k="code"></div></div>
+      <div class="barcode"></div>
+    </div>
+    <div class="hint">Screenshot this!</div>
+  </div>
+</section>
+
+<!-- 5. POLL -->
+<section class="story" id="s5">
+  <div class="sunb"></div>
+  <div class="brand" style="color:var(--deep)"><span class="dot" style="background:var(--teal)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center">
+    <h1>Where are you<br><span>jetting off</span><br>next?</h1>
+    <div class="sub">Tell us and we'll help you pack</div>
+    <div class="sticker-slot">Poll sticker here</div>
+  </div>
+</section>
+
+<!-- 6. LAST CALL -->
+<section class="story" id="s6">
+  <div class="brand"><span class="dot" style="background:var(--coral)"><svg width="34" height="34" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="5" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="3" y="6.5" width="18" height="14" rx="3.5" fill="#fff"/></svg></span>Packing Pal</div>
+  <div class="center" style="justify-content:flex-start;padding-top:380px">
+    <div class="board">
+      <div class="lbl"><span>FLIGHT</span><span>STATUS</span></div>
+      <div class="flap"><span>S</span><span>A</span><span>L</span><span>E</span></div>
+      <div class="flap red" data-flap="pctShort"></div>
+      <div class="status"><i></i>FINAL CALL</div>
+    </div>
+    <h1>Last chance<br>to <em>board</em></h1>
+    <p data-k="endsLine"></p>
+  </div>
+  <div class="sticker-slot">Link sticker here</div>
+</section>
+
+<script>
+/* ===== EDIT THE OFFER HERE ===== */
+const CONFIG = {
+  pct: "40%",                         // discount
+  what: "everything, no exceptions",  // what's included
+  code: "PACKED40",                   // promo code
+  start: "27 NOV",                    // sale starts
+  end: "30 NOV",                      // sale ends
+  dates: "Fri 27 – Mon 30 November",
+  teaserLine: "Black Friday lands this week.<br>Keep your bags by the door",
+  endsLine: "Sale ends midnight Monday.<br>Tap the link before it takes off."
+};
+const C = {...CONFIG, pctOff: CONFIG.pct + " off", pctShort: CONFIG.pct.replace(/\s/g,"")};
+document.querySelectorAll("[data-k]").forEach(el => el.innerHTML = C[el.dataset.k]);
+document.querySelectorAll("[data-flap]").forEach(el => {
+  el.innerHTML = [...(C[el.dataset.flap] + "OFF")].map(ch => `<span>${ch}</span>`).join("");
+});
+// teaser stars
+const st = document.querySelector("#s1 .stars"); let seed = 7;
+const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+for (let i = 0; i < 70; i++) {
+  const s = 3 + rnd() * 9, x = rnd() * 1080, y = rnd() * 1920;
+  st.insertAdjacentHTML("beforeend", `<i style="width:${s}px;height:${s}px;left:${x}px;top:${y}px;opacity:${.25 + rnd() * .6}"></i>`);
+}
+</script>
+</body>
+</html>
