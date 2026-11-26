@@ -31,7 +31,7 @@ The subject line must be exactly: **SEPHORA PRIZE - SKINCARE BY DR V**
 | 2.10 Founder 1 | Dr Vanita Rattan, Founder, medical doctor and cosmetic formulator. 🟡 Add any co-founders |
 
 **2.11 Founder background & brand origin**
-Dr Vanita Rattan is a medical doctor and cosmetic formulator. Her own early-onset melasma led her to spend 5 years creating a pigmentation treatment for skin of colour, then run Hyperpigmentation Clinics for 8 years, treating 40,000+ patients (95% success rate). When COVID closed the clinics, she formulated a full range in her own lab. Vision: the global reference brand for skin of colour.
+Dr Vanita Rattan is a medical doctor and cosmetic formulator. Her own early-onset melasma led her to spend 5 years creating a pigmentation treatment for skin of colour, then run Hyperpigmentation Clinics for 8 years, treating 40,000+ patients (95% success rate). When COVID closed the clinics, she formulated a full range in her own lab, made by our UK contract manufacturer. Author of Skin Revolution (HarperCollins). Vision: the global reference brand for skin of colour.
 
 <sub>392/500 characters</sub>
 
