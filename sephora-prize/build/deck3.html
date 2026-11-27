@@ -36,11 +36,25 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 .li b{font-family:"Inter Tight";font-weight:800;color:var(--caramel);font-size:20px;min-width:44px}
 .dark .li b{color:var(--glow)}
 .sw{height:64px;border-radius:50%;width:64px}
+
+.blob{position:absolute;background:var(--caramel);opacity:.13;border-radius:63% 37% 54% 46% / 55% 48% 52% 45%;pointer-events:none}
+.blob.b2{background:var(--rose);opacity:.18;border-radius:42% 58% 37% 63% / 52% 36% 64% 48%}
+.dark .blob{background:var(--copper);opacity:.22}.dark .blob.b2{background:var(--gold);opacity:.12}
+.kick{align-self:flex-start;display:inline-block;padding:9px 20px;border-radius:40px;background:rgba(200,146,90,.14)}
+.dark .kick{background:rgba(201,169,126,.16)}
+.li{border-top:none !important;background:rgba(200,146,90,.10);border-radius:40px;padding:13px 24px !important;margin-bottom:10px}
+.dark .li{background:rgba(255,250,247,.07)}
+.li > b{min-width:34px !important;height:34px;border-radius:50%;background:var(--caramel);color:var(--ivory) !important;display:inline-flex;align-items:center;justify-content:center;font-size:16px !important}
+.dark .li > b{background:var(--glow);color:var(--cocoa) !important}
+.rule{height:26px;width:200px;background:none;margin:28px 0;border-bottom:3px solid var(--gold);border-radius:0 0 50% 50%}
+.stepn{position:absolute;width:60px;height:60px;border-radius:50%;background:var(--glow);color:var(--cocoa);font-family:"Inter Tight";font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(50,21,9,.18)}
+.sw{box-shadow:0 4px 12px rgba(50,21,9,.12)}
 </style></head><body>
 
 <!-- 1 COVER -->
 <section class="page dark">
-  <div class="ph" style="right:0;top:0;bottom:0;width:1140px;background-image:url(img/g/cover.jpg);background-position:center 30%"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:1140px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/cover.jpg);background-position:center 32%"></div>
   <div class="scrimb" style="left:780px;height:30%"></div>
   <div style="position:absolute;left:840px;bottom:56px;color:var(--ivory)">
     <div style="font-family:'Inter Tight';font-weight:800;font-size:44px;letter-spacing:-.02em">Dr Vanita Rattan</div>
@@ -58,7 +72,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 2 THE FEELING -->
 <section class="page">
-  <div class="ph" style="left:0;top:0;bottom:0;width:900px;background-image:url(img/g/feel.jpg);background-position:center 35%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:900px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/feel.jpg);background-position:center 35%"></div>
   <div class="col" style="left:1010px;top:150px;width:800px">
     <div class="kick">The feeling</div>
     <div class="dis" style="font-size:118px;margin-top:30px">The best skin<br>of your life.</div>
@@ -72,7 +87,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 3 THE GAP -->
 <section class="page blush">
-  <div class="ph" style="right:0;top:0;bottom:0;width:700px;background-image:url(img/g/space.jpg);background-position:center 30%"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:700px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/space.jpg);background-position:center 30%"></div>
   <div class="col" style="left:110px;top:96px;width:1020px">
     <div class="kick">Market opportunity · the gap in the market</div>
     <div class="dis" style="font-size:80px;margin-top:24px">Skin of colour has been studied last. <span class="it c" style="font-weight:300;letter-spacing:0">We study it first.</span></div>
@@ -89,6 +105,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 4 CONSUMER -->
 <section class="page">
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
   <div class="col" style="left:110px;top:120px;width:560px">
     <div class="kick">Target consumer</div>
     <div class="dis" style="font-size:84px;margin-top:28px">Informed.<br>Invested.<br><span class="c">Overlooked.</span></div>
@@ -96,15 +113,16 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
     <div class="body" style="margin-top:22px;font-size:20px;color:var(--copper)">Also: teens with acne marks · Black men with razor bumps · thinning hair from 35</div>
     <div class="body" style="margin-top:22px;font-size:20px"><b>New customers for Sephora:</b> she has been buying elsewhere, because nothing on the shelf was made for her.</div>
   </div>
-  <div class="ph" style="left:740px;top:0;height:560px;width:586px;background-image:url(img/g/c3.jpg);background-position:center 22%"></div>
-  <div class="ph" style="left:1334px;top:0;height:560px;width:586px;background-image:url(img/g/c2.jpg);background-position:center 30%"></div>
-  <div class="ph" style="left:740px;top:568px;bottom:0;width:1180px;background-image:url(img/g/men.jpg);background-position:center 28%"></div>
+  <div class="ph" style="left:760px;top:40px;height:500px;width:540px;border-radius:999px 999px 40px 40px;background-image:url(img/g/c3.jpg);background-position:center 18%"></div>
+  <div class="ph" style="left:1330px;top:40px;height:500px;width:540px;border-radius:999px 999px 40px 40px;background-image:url(img/g/c2.jpg);background-position:center 22%"></div>
+  <div class="ph" style="left:760px;top:570px;height:470px;width:1110px;border-radius:40px 40px 260px 260px / 40px 40px 200px 200px;background-image:url(img/g/men.jpg);background-position:center 26%"></div>
   <div class="foot" style="left:110px">SKINCARE BY DR V</div><div class="pg" style="left:620px">4</div>
 </section>
 
 <!-- 5 FOUNDER STORY -->
 <section class="page dark">
-  <div class="ph" style="left:0;top:0;bottom:0;width:860px;background-image:url(img/g/story.jpg);background-position:50% center"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:860px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/story.jpg);background-position:50% center"></div>
   <div class="col" style="left:970px;top:110px;width:840px">
     <div class="kick">Brand storytelling · the founder</div>
     <div class="dis" style="font-size:80px;margin-top:28px">A doctor who couldn't find a treatment for her skin, <span class="it g" style="font-weight:300;letter-spacing:0">so she made one.</span></div>
@@ -120,7 +138,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 6 CORPORATE -->
 <section class="page dark">
-  <div class="ph" style="left:0;top:0;bottom:0;width:760px;background-image:url(img/g/corp2.jpg);background-position:center 25%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:760px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/corp2.jpg);background-position:center 25%"></div>
   <div class="col" style="left:870px;top:110px;width:940px">
     <div class="kick">Corporate · founder, team, shareholders &amp; logistics</div>
     <div class="dis" style="font-size:80px;margin-top:28px">Founder-owned.<br>Made in the UK.<br><span class="it g" style="font-weight:300;letter-spacing:0">Dispatched in a day.</span></div>
@@ -136,19 +155,20 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 7 AWARDS -->
 <section class="page">
-  <div class="ph" style="left:0;top:0;bottom:0;width:640px;background-image:url(img/g/awards.jpg);background-position:center 25%"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:640px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/awards.jpg);background-position:center 25%"></div>
   <div class="col" style="left:730px;top:90px;width:1090px">
     <div class="kick">Awards, publications &amp; press</div>
     <div style="display:flex;gap:40px;align-items:flex-end;margin-top:26px">
       <div><div class="it" style="font-size:26px;color:var(--copper)">Published by HarperCollins</div><div class="dis" style="font-size:96px;margin-top:6px;font-style:italic">Skin Revolution</div></div>
-      <div style="width:330px"><img src="img/g/gma.jpg" style="width:330px;border-radius:10px;display:block" alt=""><div class="small" style="font-size:14px;margin-top:6px">Live on Good Morning America</div></div>
+      <div style="width:330px"><img src="img/g/gma.jpg" style="width:330px;border-radius:999px 999px 30px 30px;display:block" alt=""><div class="small" style="font-size:14px;margin-top:6px">Live on Good Morning America</div></div>
     </div>
-    <img src="img/g/awardsbanner.jpg" style="width:1090px;border-radius:14px;margin-top:30px;display:block" alt="Award badges">
+    <img src="img/g/awardsbanner.jpg" style="width:1090px;border-radius:60px;margin-top:30px;display:block" alt="Award badges">
     <div class="li" style="margin-top:14px"><b>★</b><span class="body" style="font-size:21px"><b>Pure Beauty Awards 2026</b> · Winner, Best Serum (Judges’ Choice) · <span class="c">Antioxidant Power Serum</span></span></div>
     <div class="body" style="font-size:20px;margin-top:6px"><b>Award-winning ranges:</b> acne · hair growth · body hyperpigmentation · specialist kits for stubborn hyperpigmentation</div>
     <div class="kick" style="margin-top:26px">As featured in</div>
     <div style="display:flex;flex-wrap:wrap;gap:8px 34px;margin-top:12px;font-family:'Inter Tight';font-weight:700;font-size:26px;letter-spacing:.06em;color:var(--espresso)">
-      <span>VOGUE</span><span>GRAZIA</span><span>MARIE CLAIRE</span><span>GOOD MORNING AMERICA</span><span>CNN UNDERSCORED</span><span>EVENING STANDARD</span><span>BBC</span><span>FOX</span><span>CHANNEL 4</span>
+      <span>VOGUE</span><span>ELLE</span><span>GRAZIA</span><span>COSMOPOLITAN</span><span>MARIE CLAIRE</span><span>GOOD MORNING AMERICA</span><span>FOX</span><span>BBC RADIO 1</span><span>CNN UNDERSCORED</span><span>EVENING STANDARD</span><span>METRO</span>
     </div>
   </div>
   <div class="pg" style="right:110px">7</div>
@@ -156,7 +176,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 7b LOVED BY -->
 <section class="page dark">
-  <div class="ph" style="left:0;top:0;bottom:0;width:680px;background-image:url(img/g/love.jpg);background-position:center 30%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:680px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/love.jpg);background-position:center 20%"></div>
   <div class="col" style="left:780px;top:96px;width:1040px">
     <div class="kick">Dermatologists &amp; influencers love…</div>
     <div class="dis" style="font-size:72px;margin-top:22px">Trusted by the experts <span class="it g" style="font-weight:300;letter-spacing:0">on every continent.</span></div>
@@ -174,10 +195,11 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 8 BRAND IDENTITY & ASSETS -->
 <section class="page blush">
-  <div class="ph" style="left:0;top:0;width:470px;height:540px;background-image:url(img/g/m3.jpg);background-position:center 30%"></div>
-  <div class="ph" style="left:0;top:540px;width:470px;height:540px;background-image:url(img/g/m1.jpg);background-position:center 55%"></div>
-  <div class="ph" style="left:470px;top:0;width:520px;height:1080px;background-image:url(img/g/m4.jpg);background-position:center 30%"></div>
-  <div class="ph" style="left:990px;top:0;width:930px;height:430px;background-image:url(img/g/duo.jpg);background-position:center 32%"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="left:30px;top:30px;width:420px;height:495px;border-radius:999px 999px 40px 40px;background-image:url(img/g/m3.jpg);background-position:center 45%"></div>
+  <div class="ph" style="left:30px;top:555px;width:420px;height:495px;border-radius:40px 40px 999px 999px;background-image:url(img/g/m1.jpg);background-position:center 45%"></div>
+  <div class="ph" style="left:480px;top:30px;width:500px;height:1020px;border-radius:260px;background-image:url(img/g/m4.jpg);background-position:center 30%"></div>
+  <div class="ph" style="left:1010px;top:30px;width:880px;height:400px;border-radius:200px 200px 200px 40px;background-image:url(img/g/wide.jpg);background-position:center 40%"></div>
   <div class="col" style="left:1070px;top:490px;width:760px">
     <div class="kick">Brand identity &amp; visual world</div>
     <div class="dis" style="font-size:64px;margin-top:20px">Warm. Sensual. <span class="c">Scientific.</span></div>
@@ -194,7 +216,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 9 UVP -->
 <section class="page dark">
-  <div class="ph" style="right:0;top:0;bottom:0;width:860px;background-image:url(img/g/uvp.jpg);background-position:center 30%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:860px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/uvp.jpg);background-position:center 30%"></div>
   <div class="col" style="left:110px;top:110px;width:860px">
     <div class="kick">Unique value proposition</div>
     <div class="dis" style="font-size:96px;margin-top:28px">Made for you.<br><span class="it g" style="font-weight:300;letter-spacing:0">Not adapted for you.</span></div>
@@ -211,9 +234,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 10 DAILY RANGE -->
 <section class="page">
-  <div style="position:absolute;left:0;top:0;width:1920px;height:580px;background:var(--ivory)"></div>
-  <img src="img/g/st1.jpg" style="position:absolute;left:70px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt=""><img src="img/g/st2.jpg" style="position:absolute;left:370px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt=""><img src="img/g/st3.jpg" style="position:absolute;left:670px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt=""><img src="img/g/st4.jpg" style="position:absolute;left:970px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt=""><img src="img/g/st5.jpg" style="position:absolute;left:1270px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt=""><img src="img/g/st6.jpg" style="position:absolute;left:1570px;top:30px;width:330px;height:520px;object-fit:cover;object-position:center 45%;mix-blend-mode:multiply" alt="">
-  <div class="cap" style="left:110px;top:36px;color:var(--caramel);text-shadow:none">Step 1 to step 6 · the evening routine</div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="left:60px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h1.jpg);background-position:center 42%"></div><div class="stepn" style="left:172px;top:500px">1</div><div class="ph" style="left:365px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h2.jpg);background-position:center 42%"></div><div class="stepn" style="left:477px;top:500px">2</div><div class="ph" style="left:670px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h3.jpg);background-position:center 42%"></div><div class="stepn" style="left:782px;top:500px">3</div><div class="ph" style="left:975px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h4.jpg);background-position:center 42%"></div><div class="stepn" style="left:1087px;top:500px">4</div><div class="ph" style="left:1280px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h5.jpg);background-position:center 42%"></div><div class="stepn" style="left:1392px;top:500px">5</div><div class="ph" style="left:1585px;top:40px;width:285px;height:520px;border-radius:999px 999px 36px 36px;background-image:url(img/g/h6.jpg);background-position:center 42%"></div><div class="stepn" style="left:1697px;top:500px">6</div>
   <div class="col" style="left:110px;top:620px;width:620px">
     <div class="kick">Product · Complete Daily Range</div>
     <div class="dis" style="font-size:96px;margin-top:20px">Six steps<br>to <span class="it c" style="font-weight:300;letter-spacing:0">glow.</span></div>
@@ -240,7 +262,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 11 INZINCABLE -->
 <section class="page blush">
-  <div class="ph" style="right:0;top:0;bottom:0;width:900px;background-image:url(img/g/inz.jpg);background-position:center 25%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:900px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/inz.jpg);background-position:center 25%"></div>
   <div class="col" style="left:110px;top:110px;width:820px">
     <div class="kick">Product · InZincable SPF50 · our #1 seller</div>
     <div class="dis" style="font-size:92px;margin-top:28px">The mineral SPF that <span class="it c" style="font-weight:300;letter-spacing:0">disappears</span> on dark skin.</div>
@@ -256,29 +279,22 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
   <div class="pg" style="left:960px">12</div>
 </section>
 
-<!-- 12 VITAMIN C + SYSTEMS -->
-<section class="page">
-  <div class="ph" style="left:0;top:0;bottom:0;width:640px;background-image:url(img/g/vitc.jpg);background-position:center 40%"></div>
-  <div class="ph" style="left:640px;top:0;height:540px;width:420px;background-image:url(img/g/hfw.jpg);background-position:center 45%"></div>
-  <div class="ph" style="left:640px;top:540px;height:540px;width:420px;background-image:url(img/g/hbse.jpg);background-position:center 40%"></div>
-  <div class="col" style="left:1140px;top:100px;width:680px">
-    <div class="kick">Product benefits &amp; unique selling points</div>
-    <div class="dis" style="font-size:72px;margin-top:24px">Award-winning <span class="it c" style="font-weight:300;letter-spacing:0">systems.</span></div>
-    <div style="margin-top:30px">
-      <div class="li"><b>C</b><span class="body" style="font-size:19px"><b>Vitamin C Glow Serum</b> · plumper the next day, brighter in 2 weeks, gentle enough for pregnancy</span></div>
-      <div class="li"><b>T</b><span class="body" style="font-size:19px"><b>T-Zincable Tinted SPF50</b> · four shades, mineral protection for melasma-prone skin</span></div>
-      <div class="li"><b>✦</b><span class="body" style="font-size:19px"><b>Award-winning acne range</b> · TRIO Blemish, the world's first acne system made for skin of colour · 70% less acne at 8 weeks</span></div>
-      <div class="li"><b>✦</b><span class="body" style="font-size:19px"><b>Specialist kits for stubborn hyperpigmentation</b> · Facial Pigmentation Kit: 70% saw a significant reduction at 12 weeks</span></div>
-      <div class="li"><b>✦</b><span class="body" style="font-size:19px"><b>Award-winning hair growth &amp; body hyperpigmentation ranges</b> · 71% thicker hair · 81% brighter body skin</span></div>
-    </div>
-    <div class="small" style="margin-top:18px">42 SKUs · €20 to €233 · trials of 25 to 51 people</div>
+<!-- 12 INDIVIDUALS -->
+<section class="page blush">
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="col" style="left:110px;top:90px;width:1700px">
+    <div class="kick">Product benefits · every step, also sold on its own</div>
+    <div class="dis" style="font-size:84px;margin-top:22px">Start with one. <span class="it c" style="font-weight:300;letter-spacing:0">Stay for the routine.</span></div>
   </div>
+  <div style="position:absolute;left:70px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i1.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Oil Melting Cleanser</div><div class="small" style="font-size:16px;margin-top:6px">€27 · 5% cannabis oil · first cleanse</div></div><div style="position:absolute;left:332px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i2.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Micellar Gel Wash</div><div class="small" style="font-size:16px;margin-top:6px">€23 · 2% niacinamide</div></div><div style="position:absolute;left:594px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i3.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Super Hydrating Toner</div><div class="small" style="font-size:16px;margin-top:6px">€24 · hydration after cleansing</div></div><div style="position:absolute;left:856px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i4.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Exfoliate to Glow</div><div class="small" style="font-size:16px;margin-top:6px">€24 · 5% mandelic + 5% lactic</div></div><div style="position:absolute;left:1118px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i5.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Antioxidant Power Serum</div><div class="small" style="font-size:16px;margin-top:6px">€57 · 🏆 Pure Beauty Awards 2026</div></div><div style="position:absolute;left:1380px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i6.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">Cera Pep Moisturiser</div><div class="small" style="font-size:16px;margin-top:6px">€38 · our #2 best seller</div></div><div style="position:absolute;left:1642px;top:290px;width:240px"><div class="ph" style="position:relative;width:240px;height:520px;border-radius:999px 999px 32px 32px;background-image:url(img/g/i7.jpg);background-position:center 25%"></div><div style="font-family:'Inter Tight';font-weight:800;font-size:22px;color:var(--espresso);margin-top:16px;line-height:1.1">InZincable SPF50</div><div class="small" style="font-size:16px;margin-top:6px">€33 · our #1 best seller</div></div>
+  <div class="small" style="position:absolute;left:110px;bottom:60px;font-size:16px">UK prices shown in € (£1 ≈ €1.195) · tyrosinase inhibitors throughout the routine · fragrance-free · 42 SKUs in the brand</div>
   <div class="pg" style="right:110px">13</div>
 </section>
 
 <!-- 13 ACHIEVEMENTS -->
 <section class="page dark">
-  <div class="ph" style="right:0;top:0;bottom:0;width:700px;background-image:url(img/g/stats.jpg);background-position:center 30%"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:700px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/stats.jpg);background-position:center 30%"></div>
   <div class="col" style="left:110px;top:100px;width:1040px">
     <div class="kick">Commercial achievements · loyalty · global reach</div>
     <div class="dis" style="font-size:72px;margin-top:24px">Loved, and <span class="it g" style="font-weight:300;letter-spacing:0">bought again.</span></div>
@@ -297,7 +313,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 14 GROWTH & WHY SEPHORA -->
 <section class="page">
-  <div class="ph" style="left:0;top:0;bottom:0;width:700px;background-image:url(img/g/drvapply.jpg);background-position:62% center"></div>
+  <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:700px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/drvapply.jpg);background-position:62% center"></div>
   <div class="col" style="left:800px;top:100px;width:1010px">
     <div class="kick">Growth projections &amp; why Sephora</div>
     <div class="dis" style="font-size:74px;margin-top:24px">Next: <span class="it c" style="font-weight:300;letter-spacing:0">Europe's shelves.</span></div>
@@ -320,7 +337,8 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 
 <!-- 15 CLOSING -->
 <section class="page dark">
-  <div class="ph" style="right:0;top:0;bottom:0;width:1000px;background-image:url(img/g/close.jpg);background-position:45% center"></div>
+  <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
+  <div class="ph" style="right:0;top:0;bottom:0;width:1000px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/close.jpg);background-position:45% center"></div>
   <div class="col" style="left:110px;top:0;bottom:0;width:760px;justify-content:center">
     <img src="img/logo_ivory.png" alt="Dr Vanita Rattan" style="width:300px">
     <div class="dis" style="font-size:88px;margin-top:60px">Formulated for skin of colour.</div>
