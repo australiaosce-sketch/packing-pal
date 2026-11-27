@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:transparent}
+.stage{width:1400px;height:1700px;display:flex;align-items:center;justify-content:center;perspective:3200px}
+.book{position:relative;width:900px;height:1350px;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(4deg)}
+.front{position:absolute;inset:0;overflow:hidden;border-radius:4px 10px 10px 4px;background:linear-gradient(118deg,#3b1a12 0 13%,#a3161d 13% 26%,#c8561b 26% 40%,#3e1a11 40% 53%,#a3161d 53% 64%,#c8771f 64% 77%,#3e1a11 77% 88%,#c0453a 88% 100%);transform:translateZ(45px)}
+
+
+.bands{position:absolute;inset:0;background:
+ repeating-linear-gradient(28deg,transparent 0 260px,rgba(255,255,255,.035) 260px 262px)}
+.hinge{position:absolute;left:0;top:0;bottom:0;width:38px;background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(255,255,255,.08) 40%,rgba(0,0,0,.18) 70%,transparent);z-index:3}
+.sheen{position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.16),transparent 35%,transparent 70%,rgba(0,0,0,.18));z-index:3}
+.txt{position:absolute;left:0;right:0;top:400px;text-align:center;z-index:4;font-family:Montserrat,sans-serif}
+.t1{font-weight:400;font-size:210px;letter-spacing:.04em;color:#f7cfa6;line-height:1}
+.t2{font-weight:400;font-size:92px;letter-spacing:.06em;color:#f7cfa6;margin-top:6px}
+.rule{width:76%;height:2px;background:linear-gradient(90deg,transparent,#f3c49a 12%,#f3c49a 88%,transparent);margin:30px auto 34px}
+.t3{font-weight:500;font-size:46px;line-height:1.3;color:#fff6ee;text-shadow:0 2px 10px rgba(40,10,5,.35)}
+.logo{position:absolute;left:0;right:0;bottom:95px;text-align:center;z-index:4}
+.logo img{width:540px}
+.pages{position:absolute;top:10px;bottom:10px;right:0;width:90px;transform-origin:right center;transform:rotateY(90deg) translateX(45px) translateZ(0);
+ background:repeating-linear-gradient(90deg,#f4ede4 0 2px,#e2d8cc 2px 3px);box-shadow:inset 0 0 12px rgba(0,0,0,.25)}
+.back{position:absolute;inset:0;background:#3b1a12;transform:translateZ(-45px);border-radius:4px 10px 10px 4px}
+.spine{position:absolute;top:0;bottom:0;left:0;width:90px;background:#2c130d;transform-origin:left center;transform:rotateY(-90deg) translateX(-45px)}
+.shadow{position:absolute;left:60px;right:-80px;bottom:-60px;height:90px;background:radial-gradient(ellipse at center,rgba(40,15,8,.45),transparent 70%);transform:translateZ(-60px) rotateX(90deg);filter:blur(6px)}
+</style></head><body><div class="stage"><div class="book">
+<div class="shadow"></div><div class="back"></div><div class="spine"></div><div class="pages"></div>
+<div class="front"><div class="bands"></div><div class="hinge"></div><div class="sheen"></div>
+<div class="txt"><div class="t1">SKIN</div><div class="t2">REVOLUTION</div><div class="rule"></div>
+<div class="t3">The Ultimate Guide to<br>Beautiful and Healthy<br>Skin of Colour</div></div>
+<div class="logo"><img src="img/logo_ivory.png"></div></div>
+</div></div></body></html>
