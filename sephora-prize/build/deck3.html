@@ -3,13 +3,16 @@
 <title>Skincare by Dr V · Sephora Prize</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;700;800&family=Mulish:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--espresso:#4B2E20;--cocoa:#321509;--ivory:#FFFAF7;--blush:#F5DBCE;--caramel:#C8925A;--gold:#C9A97E;--rose:#C9A08E;--copper:#B4703F;--glow:#F6CB52}
+:root{--espresso:#4B2E20;--cocoa:#321509;--ivory:#FFFAF7;--blush:#F5DBCE;--caramel:#C8925A;--gold:#C9A97E;--rose:#C9A08E;--copper:#B4703F;--glow:#F6CB52;--nrose:#E9C3B1;--nsand:#DDB596;--nlatte:#F3E2D5;--nmocha:#A8705A;--ncinn:#7F4A3B}
 @page{size:1920px 1080px;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:1920px;height:1080px;position:relative;overflow:hidden;page-break-after:always;background:var(--ivory)}
 .dark{background:var(--espresso);color:var(--ivory)}
 .blush{background:var(--blush)}
+.rose{background:var(--nrose)}.sand{background:var(--nsand)}.latte{background:var(--nlatte)}
+.dark.mocha{background:var(--nmocha)}.dark.cinn{background:var(--ncinn)}
+.sand .blob,.rose .blob{background:#fff;opacity:.18}.dark.mocha .blob{background:var(--nrose);opacity:.16}.dark.cinn .blob{background:var(--nsand);opacity:.14}
 .ph{position:absolute;background-size:cover;background-position:center;background-repeat:no-repeat}
 .col{position:absolute;display:flex;flex-direction:column}
 .kick{font-family:Mulish;font-weight:800;font-size:17px;letter-spacing:.34em;text-transform:uppercase;color:var(--caramel)}
@@ -71,7 +74,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 2 WOW -->
-<section class="page dark">
+<section class="page dark mocha">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
   <div class="ph" style="right:0;top:0;bottom:0;width:640px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/wow.jpg);background-position:center 35%"></div>
   <div class="col" style="left:110px;top:90px;width:1120px">
@@ -84,7 +87,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 3 THE GAP -->
-<section class="page blush">
+<section class="page rose">
   <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
   <div class="ph" style="right:0;top:0;bottom:0;width:640px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/feel.jpg);background-position:center 30%"></div>
   <div class="col" style="left:110px;top:210px;width:1100px">
@@ -97,7 +100,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 3b SOC VS CAUCASIAN -->
-<section class="page">
+<section class="page latte">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
   <div class="ph" style="left:0;top:0;bottom:0;width:520px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/socm.jpg);background-position:center 25%"></div>
   <div class="col" style="left:600px;top:70px;width:1220px">
@@ -112,7 +115,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 3c THE ANSWER -->
-<section class="page blush">
+<section class="page sand">
   <div class="blob b2" style="width:640px;height:560px;left:-200px;bottom:-260px"></div>
   <div class="col" style="left:110px;top:90px;width:760px">
     <div class="kick">Dr V's answer · the Daily Range</div>
@@ -159,7 +162,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 6 CORPORATE -->
-<section class="page dark">
+<section class="page dark cinn">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
   <div class="ph" style="left:0;top:0;bottom:0;width:760px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/corp2_fa.jpg);background-position:center 25%"></div>
   <div class="col" style="left:870px;top:110px;width:940px">
@@ -199,7 +202,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 7b LOVED BY -->
-<section class="page dark">
+<section class="page dark mocha">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
   <div class="ph" style="left:0;top:0;bottom:0;width:680px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/love.jpg);background-position:center 20%"></div>
   <div class="col" style="left:780px;top:96px;width:1040px">
@@ -218,7 +221,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 8 BRAND IDENTITY & ASSETS -->
-<section class="page blush">
+<section class="page latte">
   <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
   <div class="ph" style="left:30px;top:30px;width:420px;height:495px;border-radius:999px 999px 40px 40px;background-image:url(img/g/m3.jpg);background-position:center 45%"></div>
   <div class="ph" style="left:30px;top:555px;width:420px;height:495px;border-radius:40px 40px 999px 999px;background-image:url(img/g/m1.jpg);background-position:center 45%"></div>
@@ -229,7 +232,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
     <div class="dis" style="font-size:64px;margin-top:20px">Warm. Sensual. <span class="c">Scientific.</span></div>
 <div style="margin-top:20px"><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:21px;margin:0">Recognition before education</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:21px;margin:0">Feeling before formulation</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:21px;margin:0">Real skin, real texture, warm light</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:21px;margin:0">Every message ends <i>“Love Dr V x”</i></span></div></div>
     <div style="display:flex;gap:14px;margin-top:28px;align-items:center">
-      <div class="sw" style="background:var(--espresso)"></div><div class="sw" style="background:var(--copper)"></div><div class="sw" style="background:var(--caramel)"></div><div class="sw" style="background:var(--gold)"></div><div class="sw" style="background:var(--rose)"></div><div class="sw" style="background:var(--ivory);border:1.5px solid var(--rose)"></div><div class="sw" style="background:var(--glow)"></div>
+      <div style="display:flex"><div style="width:96px"><div style="height:58px;background:#4B2E20"></div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--espresso);margin-top:8px">Espresso</div></div><div style="width:96px"><div style="height:58px;background:#7F4A3B"></div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--espresso);margin-top:8px">Cinnamon</div></div><div style="width:96px"><div style="height:58px;background:#A8705A"></div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--espresso);margin-top:8px">Mocha</div></div><div style="width:96px"><div style="height:58px;background:#DDB596"></div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--espresso);margin-top:8px">Sand</div></div><div style="width:96px"><div style="height:58px;background:#E9C3B1"></div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--espresso);margin-top:8px">Rose nude</div></div></div>
       <img src="img/logo_espresso.png" style="width:230px;margin-left:24px" alt="">
     </div>
     <div class="small" style="margin-top:22px;font-size:16px;letter-spacing:.18em;text-transform:uppercase;font-weight:800">Honesty · Intentional · Integrity · Empowerment · Passion</div>
@@ -239,7 +242,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 9 UVP -->
-<section class="page">
+<section class="page rose">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div>
   <div class="ph" style="right:0;top:0;bottom:0;width:780px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/uvp_face.jpg);background-position:55% center"></div>
   <div class="col" style="left:110px;top:80px;width:880px">
@@ -257,7 +260,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 <!-- 10 DAILY RANGE -->
 <section class="page">
   <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
-  <div class="ph" style="left:50px;top:50px;width:880px;height:980px;border-radius:440px 440px 60px 60px;background-image:url(img/g/omi_dr1.jpg);background-position:center 60%;background-size:auto 112%"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:950px;background-image:url(img/g/omi_dr1.jpg);background-position:center 65%"></div>
   <div class="col" style="left:1000px;top:70px;width:830px">
     <div class="kick">Product · Complete Daily Range</div>
     <div class="dis" style="font-size:84px;margin-top:18px">Six steps <span class="it c" style="font-weight:300;letter-spacing:0">to glow.</span></div>
@@ -277,22 +280,22 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 11 INZINCABLE -->
-<section class="page blush">
+<section class="page sand">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
-  <div class="ph" style="right:0;top:0;bottom:0;width:900px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/omi_inz503.jpg);background-position:center 50%"></div>
-  <div class="col" style="left:110px;top:110px;width:820px">
+  <div class="ph" style="right:0;top:0;bottom:0;width:1060px;background-image:url(img/g/omi_inz503.jpg);background-position:center 50%"></div>
+  <div class="col" style="left:90px;top:90px;width:700px">
     <div class="kick">Product · InZincable SPF50 · our #1 seller</div>
-    <div class="dis" style="font-size:92px;margin-top:28px">The mineral SPF that <span class="it c" style="font-weight:300;letter-spacing:0">disappears</span> on dark skin.</div>
-<div style="margin-top:26px"><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:22px;margin:0"><b>World first:</b> zinc oxide SPF50 that minimises white cast on skin of colour</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:22px;margin:0">17% zinc oxide · no chemical filters · PA++++</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:22px;margin:0"><b>MelaShield:</b> tyrosinase inhibitors that work in daylight</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:22px;margin:0">Vegan friendly</span></div></div>
+    <div class="dis" style="font-size:70px;margin-top:22px">The mineral SPF that <span class="it c" style="font-weight:300;letter-spacing:0">disappears</span> on dark skin.</div>
+<div style="margin-top:26px"><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:19px;margin:0"><b>World first:</b> zinc oxide SPF50 that minimises white cast on skin of colour</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:19px;margin:0">17% zinc oxide · no chemical filters · PA++++</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:19px;margin:0"><b>MelaShield:</b> tyrosinase inhibitors that work in daylight</span></div><div style="display:flex;gap:16px;align-items:baseline;margin-bottom:12px"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:var(--caramel);transform:translateY(-3px)"></span><span class="body" style="font-size:19px;margin:0">Vegan friendly</span></div></div>
     <div style="display:flex;gap:56px;margin-top:34px">
-      <div><div class="num" style="font-size:84px">82%</div><div class="lbl">said it looked<br>invisible</div></div>
-      <div><div class="num" style="font-size:84px">73%</div><div class="lbl">saw improved<br>hyperpigmentation</div></div>
-      <div><div class="num" style="font-size:84px">88%</div><div class="lbl">would<br>recommend it</div></div>
+      <div><div class="num" style="font-size:66px">82%</div><div class="lbl">said it looked<br>invisible</div></div>
+      <div><div class="num" style="font-size:66px">73%</div><div class="lbl">saw improved<br>hyperpigmentation</div></div>
+      <div><div class="num" style="font-size:66px">88%</div><div class="lbl">would<br>recommend it</div></div>
     </div>
     <div class="small" style="margin-top:22px">Independent consumer trial, 51 people aged 30 to 64, 4 weeks · Marie Claire 2024: #1 Mineral Sunscreen for Dark Skin · 2,000+ verified reviews · 19,031 orders in 12 months</div>
     <div class="q" style="font-size:28px;margin-top:22px">“This is ace for the face! No white cast and it’s SPF50!” <span class="small" style="font-style:normal;font-weight:800;letter-spacing:.12em">BEVERLEY KNIGHT</span></div>
   </div>
-  <div class="pg" style="left:960px">14</div>
+  <div class="pg" style="left:90px">14</div>
 </section>
 
 <!-- 11b RESULTS -->
@@ -315,7 +318,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 12 INDIVIDUALS -->
-<section class="page blush">
+<section class="page rose">
   <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
   <div class="col" style="left:110px;top:90px;width:1700px">
     <div class="kick">Product benefits · every step, also sold on its own</div>
@@ -329,7 +332,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 <!-- 14 GROWTH & WHY SEPHORA -->
 <section class="page">
   <div class="blob b2" style="width:640px;height:560px;right:-160px;bottom:-240px"></div><div class="blob" style="width:360px;height:320px;left:-100px;top:-120px"></div>
-  <div class="ph" style="left:0;top:0;bottom:0;width:700px;border-radius:0 420px 420px 0 / 0 50% 50% 0;background-image:url(img/g/group.jpg);background-position:center 35%"></div>
+  <div class="ph" style="left:0;top:0;bottom:0;width:740px;background-image:url(img/g/group.jpg);background-position:center 35%"></div>
   <div class="col" style="left:800px;top:100px;width:1010px">
     <div class="kick">Growth projections &amp; why Sephora</div>
     <div class="dis" style="font-size:74px;margin-top:24px">Next: <span class="it c" style="font-weight:300;letter-spacing:0">Europe's shelves.</span></div>
@@ -351,7 +354,7 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 14b OTHER RANGES -->
-<section class="page">
+<section class="page latte">
   <div class="blob b2" style="width:640px;height:560px;right:-200px;top:-260px"></div><div class="blob" style="width:420px;height:380px;left:-140px;bottom:-200px"></div>
   <div class="col" style="left:110px;top:70px;width:1700px">
     <div class="kick">Beyond the Daily Range · 42 SKUs</div>
@@ -378,14 +381,14 @@ body{font-family:Mulish,sans-serif;color:var(--cocoa);background:var(--ivory);-w
 </section>
 
 <!-- 15 CLOSING -->
-<section class="page dark">
+<section class="page dark cinn">
   <div class="blob" style="width:760px;height:620px;left:-180px;bottom:-260px"></div><div class="blob b2" style="width:420px;height:380px;right:-120px;top:-140px"></div>
-  <div class="ph" style="right:0;top:0;bottom:0;width:1000px;border-radius:420px 0 0 420px / 50% 0 0 50%;background-image:url(img/g/close_fa.jpg);background-position:45% center"></div>
-  <div class="col" style="left:110px;top:0;bottom:0;width:760px;justify-content:center">
+  <div class="ph" style="right:0;top:0;bottom:0;width:1180px;background-image:url(img/g/close_fa.jpg);background-position:45% center"></div>
+  <div class="col" style="left:90px;top:0;bottom:0;width:600px;justify-content:center">
     <img src="img/logo_ivory.png" alt="Dr Vanita Rattan" style="width:300px">
-    <div class="dis" style="font-size:88px;margin-top:60px">Formulated for skin of colour.</div>
-    <div class="it" style="font-size:42px;color:var(--glow);margin-top:20px">From the first ingredient to the last.</div>
-    <div class="it" style="font-size:40px;color:var(--blush);margin-top:70px">Love Dr V x</div>
+    <div class="dis" style="font-size:64px;margin-top:50px">Formulated for skin of colour.</div>
+    <div class="it" style="font-size:32px;color:var(--glow);margin-top:20px">From the first ingredient to the last.</div>
+    <div class="it" style="font-size:32px;color:var(--blush);margin-top:50px">Love Dr V x</div>
     <div class="small" style="margin-top:30px">skincarebydrv.com · Ace Medicine Ltd · London</div>
   </div>
 </section>
