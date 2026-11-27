@@ -114,7 +114,7 @@ A mineral SPF50 that finally leaves no white cast on Black and brown skin. It pr
 | 6.9 Price range (EUR) | ✅ €20 – €233 (£17 Deep Cleansing Body Wash to £195 Dr V Sunglasses; skincare tops out at €183 for the Complete Daily Range) |
 | 6.10 Latest completed FY net revenue | ✅ Shopify net sales, calendar 2025: **£4,600,295 ≈ €5.50m**. Reporting year 2025. Scope: Skincare by Dr V online store, worldwide. 🟡 If your accounts use a different year-end, or you want to add Amazon and clinic revenue, use your accountant's figure instead |
 | 6.11 YoY revenue growth | ✅ **+3.9%** (2025 vs 2024, Shopify). Orders +11.8%, customers +5.4% |
-| 6.12 Active SKUs | ✅ **67** (counted in Shopify: 43 products and their shade/size options, including kits and bundles; excludes samples, gift cards and professional boxes) |
+| 6.12 Active SKUs | ✅ **42** (confirmed by Dr V, 27 Nov 2026) |
 | 6.13 DTC share of revenue | 🟡 **VANITA TO FILL**. Own store is almost all of it, but Amazon US and clinic sales need adding |
 | 6.14 Countries with active sales | ✅ **101** (Shopify, last 12 months) |
 | 6.15 Key distribution partners | Amazon US (marketplace). 🟡 Add others |
